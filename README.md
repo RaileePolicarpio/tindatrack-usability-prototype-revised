@@ -1,6 +1,6 @@
-# TindaTrack Revised Working Prototype - Usability Revision 6
+# TindaTrack Revised Working Prototype - Usability Revision 7
 
-A responsive store-management prototype for sari-sari stores and other small retail businesses, including wholesalers, vegetable stores, school-supply retailers, and businesses that distribute products through resellers.
+Revision 7 is the post-Round-2 usability revision of TindaTrack. It keeps the complete Revision 6 store-management and reseller workflows, while reducing feature clutter and adding clearer first-use guidance for advanced options.
 
 ## Demo accounts
 
@@ -12,8 +12,6 @@ A responsive store-management prototype for sari-sari stores and other small ret
 - Email: `reseller@tindatrack.ph`
 - Password: `reseller1234`
 
-The Owner controls the master product catalog, central inventory, stock-in, suppliers, product allocation, and overall reseller oversight. The Reseller operates a limited storefront using only stock assigned by the Owner.
-
 ## How to open
 
 Open `index.html` in a modern browser, or run a local server:
@@ -22,75 +20,70 @@ Open `index.html` in a modern browser, or run a local server:
 python -m http.server 8000
 ```
 
-Then open the local address shown by Python in your browser.
+Then open the local address shown by Python.
 
-## Revision 6 highlights
+## Revision 7 highlights
 
-### Operational reseller account
-The reseller account is now an active store-operation account rather than a read-only portal.
+### 1. Functional Simple View
+The previous Simple Mode setting is now **Simple View** and actually changes the Inventory interface.
 
-Resellers can:
-- Run **New Sale** using only their assigned stock.
-- Accept Owner-enabled payment methods: Cash, GCash, and/or Customer Credit.
-- Maintain **My Customers**.
-- Record customer credit, due dates, payments, and completed credit history.
-- View **My Stock** with received, sold, returned, damaged/lost, pending, and available quantities.
-- Record their own operating expenses.
-- View their own sales history, reports, estimated profit, and balance to the Owner.
-- Export their own reports to Excel-compatible format and Print/Save as PDF.
-- Request product returns.
-- Report damaged, lost, spoiled, or other stock issues for Owner approval.
-- Receive role-specific notifications and a short reseller tutorial.
+When Simple View is ON:
+- Edit and Stock-in remain directly visible.
+- Adjust Stock, Physical Stock Count, Stock History/FIFO Batches, and Archive are grouped under **More**.
+- A short note explains why the actions are grouped.
 
-### Owner oversight
-The Owner can:
-- View all reseller stock, sales, customer credit, reseller expenses, balances, pending requests, and transaction history.
-- Release Store Stock to a reseller without treating the release as an end-customer sale.
-- Set a **Reseller Cost** and **Minimum Selling Price**. The reseller may sell above the minimum but not below it.
-- Configure each reseller as **Wholesale** or **Consignment**.
-- Configure Cash, GCash, and Credit availability per reseller.
-- Configure reseller sale notifications as **Grouped**, **Immediate**, or **Off**. Grouped is the default.
-- Approve or reject reseller return requests and stock-issue reports.
-- Optionally display reseller estimated profit in Owner reports.
-- Preview a reseller account while remaining in the Owner session.
+When Simple View is OFF, the full set of inventory action icons is shown.
 
-### Wholesale and consignment rules
-- **Wholesale:** the reseller's balance to the Owner increases when stock is released.
-- **Consignment:** the reseller's balance to the Owner increases when the reseller records a sale.
-- For a consignment sale made on customer credit, the reseller still owes the Owner once the product is recorded as sold. Customer debt to the reseller and reseller debt to the Owner are tracked separately.
+### 2. Optional modules now hide their related UI
+Specialized features no longer leave unnecessary controls visible after they are disabled.
 
-### Inventory authority
-- The Owner alone manages the master inventory, Add/Edit Product, Stock-in, suppliers, Archive, central reconciliation, and FIFO configuration.
-- A reseller receives a separate **My Stock** view containing only products allocated by the Owner.
-- Reseller sales reduce Reseller Stock, not Store Stock a second time.
-- Returns only move back to Store Stock after Owner confirmation.
-- Stock issues only reduce official reseller stock after Owner approval.
+- **Reseller Management OFF:** reseller navigation, dashboard summaries, report cards/tabs/columns, reseller oversight settings, and reseller-specific alerts are hidden from the Owner interface.
+- **Expiration Tracking OFF:** expiration product fields, stock-in expiration input, expiration alerts, expiration settings, and expiration-related inventory display are hidden.
+- **Batch / FIFO OFF:** inventory-mode controls and FIFO-specific display are hidden; FIFO behavior is disabled while the setting is off.
 
-### Owner reports and accounting clarity
-- Direct Store Sales and Reseller Retail Sales are shown separately in Owner reporting.
-- Reseller retail revenue is not mixed into the Owner's direct-store estimated profit.
-- Reseller financial and customer activity remains visible through the Resellers report and reseller details.
+Existing demo records are preserved when a feature is hidden so they can reappear if the feature is enabled again.
 
-## Revision 5 functionality retained
+### 3. Clearer advanced inventory guidance
+Short plain-language explanations were added to:
+- Adjust Stock
+- Physical Stock Count
+- Stock History / FIFO Batches
+- Stock-in when FIFO is enabled
 
-- Dedicated Reseller Management and stock allocation.
-- Spoiled, expired, damaged, lost, personal-use, and inventory-correction adjustments.
-- Physical inventory reconciliation with an audit trail.
-- Simple inventory by default with optional Batch/FIFO tracking.
-- Optional per-product expiration tracking and configurable expiration alerts.
-- Needs Attention dashboard design with optional reseller and expiration summaries.
-- Flexible Expense categories and payment methods.
-- Simplified Reports with detailed reports on demand.
-- Supplier purchase history.
-- Business Feature toggles to reduce visual overload.
-- Softer Dark Mode, responsive mobile/desktop layouts, and inventory action tooltips.
-- Automatic Archive behavior when all tracked stock reaches zero.
-- Restore through Stock-in and preserved Customer Credit History.
+FIFO is explained as using the **oldest received stock first**, while checkout continues to handle it automatically.
 
-## Offline scope
+### 4. Expense category discoverability
+The Add Expense form now keeps the custom-category field hidden until **Custom** is selected. The category field explicitly tells the user to choose Custom if the needed category is not listed.
 
-This remains an online usability prototype. True offline operation is intentionally not simulated because a production implementation would require local transaction queues, multi-device synchronization, conflict resolution, and secure server-side persistence.
+### 5. Reports adapt to enabled features
+The simple Reports summary remains the default. When Reseller Management is disabled, reseller sales cards, reseller report tabs, reseller inventory columns, and reseller data are removed from the Owner reports instead of remaining visible.
+
+### 6. Revised first-time owner tour
+The owner tour now explains:
+- Everyday tasks first
+- Optional store-specific features
+- Adjust Stock vs Physical Stock Count
+- What FIFO means
+- Simplified reports
+- Simple View and the More menu
+
+The tour remains skippable and replayable from Settings.
+
+## Revision 6 functionality retained
+
+- Operational Owner and Reseller accounts
+- Reseller checkout, customers, credit, expenses, reports, balance, returns, and stock issues
+- Wholesale and consignment arrangements
+- Owner reseller oversight and preview
+- Inventory adjustments and physical reconciliation
+- Batch/FIFO inventory and expiration tracking when enabled
+- Supplier purchase history and flexible stock-in sources
+- Customer Credit History
+- Automatic product archive at zero tracked stock and restoration through stock-in
+- Simplified reports with detailed reports on demand
+- Softer dark mode and responsive desktop/mobile layouts
+- Inventory hover tooltips
 
 ## Prototype limitation
 
-This is a school usability prototype. Data and authentication are stored only in the current browser using `localStorage`. It does not implement real server authentication or cloud synchronization. Use demo information only.
+This is a school usability prototype. Authentication and data are stored only in the current browser using `localStorage`. It does not implement real server authentication, cloud synchronization, or production offline synchronization. Use demo information only.

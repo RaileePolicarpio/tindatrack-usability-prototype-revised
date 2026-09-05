@@ -81,3 +81,11 @@ body.demo-mobile-preview .stats-grid.four,body.demo-mobile-preview .optional-sum
 @media print{.sidebar,.topbar,.bottom-nav,.page-head-actions,.report-toolbar,.period-pills,.row-between>button,.preview-banner{display:none!important}.app-main{margin:0!important}.content{padding:0!important;max-width:none!important}.card{box-shadow:none!important}.report-grid{grid-template-columns:repeat(4,1fr)!important}body{background:#fff!important;color:#111!important}}
 
 .store-name:has(strong){white-space:normal}.store-name strong,.store-name small{display:block}.store-name small{margin-top:2px;color:var(--muted-2)}
+
+/* Revision 7 - Round 2 usability refinements: Simple View, optional modules, and first-use guidance */
+.inventory-simple-note{margin-bottom:0}.advanced-action-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}.advanced-action{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:16px;text-align:left;display:flex;align-items:flex-start;gap:13px;color:var(--ink);min-height:112px}.advanced-action:hover{border-color:#abcbbb;background:var(--green-050)}.advanced-action .feature-icon{margin:0;flex:0 0 auto}.advanced-action>span:last-child{display:grid;gap:5px}.advanced-action small{color:var(--muted);line-height:1.4}.advanced-action.danger-action:hover{background:var(--red-100);border-color:#e8b7b7;color:var(--red-700)}.report-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}:root[data-theme="dark"] .advanced-action{background:var(--surface);border-color:var(--line)}:root[data-theme="dark"] .advanced-action:hover{background:#31443a}:root[data-theme="dark"] .advanced-action.danger-action:hover{background:#4b3030}
+@media(max-width:700px){.advanced-action-grid{grid-template-columns:1fr}.advanced-action{min-height:0}}
+body.demo-mobile-preview .advanced-action-grid{grid-template-columns:1fr}
+.inventory-table.simple-inventory-table{min-width:1050px}.inventory-table.simple-inventory-table .table-actions{min-width:132px}
+body.demo-mobile-preview .inventory-table.simple-inventory-table{min-width:1040px}
+

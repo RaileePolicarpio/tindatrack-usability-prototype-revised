@@ -1,63 +1,37 @@
-# TindaTrack Usability Revision 6 - Implementation Notes
+# TindaTrack Usability Revision 7 - Round 2 Implementation Notes
 
-## Design direction
+## Revision goal
 
-Revision 6 expands the reseller feature after clarifying that a reseller is not only a person whose stock is monitored. A reseller is an operational user who sells products to their own customers while remaining under the Owner's inventory authority.
+Round 2 testing largely validated Revision 6. Testers described the revised system as clear, complete, easy to navigate, adaptable, time-saving, and capable of replacing paper records. The remaining concern was not missing functionality; it was the possibility that advanced or store-specific options could become confusing or visually crowded for businesses that do not need them.
 
-The interface still follows the usability principle established from testing: **add the requested capability without showing every specialized function to every user**.
+Revision 7 therefore follows this principle:
 
-## Role model
+**Keep the complete capability, but show specialized functions only when the store needs them.**
 
-### Owner
-The Owner controls the master store, including products, Store Stock, Stock-in, suppliers, FIFO settings, Archive, and release of products to resellers. The Owner can monitor reseller activity without needing the reseller's password.
+## Round 2 feedback translated into changes
 
-### Reseller
-The Reseller receives an assigned inventory called **My Stock**. The reseller can sell those products, manage their own customers and customer credit, record reseller expenses, view their own reports, and report stock issues or request returns.
+### Advanced option complexity / initial onboarding
+Revision 7 adds short first-use explanations for FIFO, stock adjustments, physical stock counts, and the More-actions menu. The owner tour was expanded to explain these concepts in plain language.
 
-The Reseller cannot alter the Owner's central inventory or supplier records.
+### Feature clutter potential
+The previous Simple Mode setting is now a functional **Simple View**. In Inventory, common actions remain visible while less common tools are grouped under More.
 
-## Inventory flow
+### Store-to-store differences
+Reseller Management, Expiration Tracking, and Batch/FIFO remain available because different testers valued different features. Disabling a module now removes its related UI from everyday screens instead of leaving unused controls visible.
 
-Normal allocation and sale:
+### Expense customization
+Custom expense categories already existed, but one tester still needed clarification. The Add Expense form now explicitly tells users to choose Custom and reveals the custom-category input only after that choice.
 
-`Store Stock -> My Stock (Reseller) -> Sold`
+### Reports
+The simplified Reports design is retained. Detailed reports remain hidden by default, and reseller-specific report content disappears when Reseller Management is disabled.
 
-Return:
+## What was deliberately not removed
 
-`My Stock -> Pending Return -> Owner confirms -> Store Stock`
+- Reseller Management: highly relevant to wholesale/reseller-based stores.
+- FIFO and expiration tracking: particularly useful for stores handling vegetables, food, or other expiring goods.
+- Stock adjustments and physical counts: important for spoilage, damage, loss, and reconciliation.
+- Detailed reports: still available, but kept behind progressive disclosure.
 
-Damage/loss/spoilage:
+## Data preservation when modules are hidden
 
-`My Stock -> Stock Issue Report -> Owner approves -> Adjusted Reseller Stock`
-
-A reseller sale does not deduct Store Stock again because Store Stock was already reduced when the Owner released the units.
-
-## Customer credit vs reseller debt
-
-Two balances are intentionally separate:
-
-1. **Customer -> Reseller:** the reseller's customer credit / utang.
-2. **Reseller -> Owner:** the reseller's obligation for products received or sold, depending on the arrangement.
-
-For Consignment, the reseller's amount due to the Owner increases when a sale is recorded, even if the end customer selected Credit. This prevents the Owner's receivable from depending on whether the reseller has already collected from their customer.
-
-## Reseller arrangements
-
-- **Wholesale:** Owner receivable is created when stock is released.
-- **Consignment:** Owner receivable is created when reseller stock is sold.
-
-Each released product records a Reseller Cost and a Minimum Selling Price. The reseller can choose a customer selling price at or above the minimum.
-
-## Notification strategy
-
-Routine reseller sales can be Grouped, Immediate, or Off. Grouped is the default to avoid notification overload. Important activities such as customer credit, pending returns, and stock-issue reports remain visible to the Owner through reseller oversight and notifications.
-
-Resellers receive only relevant alerts, such as low assigned stock, expiration, overdue customer credit, new stock received, and approval results.
-
-## Accounting presentation
-
-Reseller retail sales are operational data that the Owner may monitor, but they are not automatically the same as the Owner's direct retail revenue. Revision 6 therefore separates **Store Sales** and **Reseller Sales** in Owner summaries and keeps direct-store estimated profit separate from reseller retail profit.
-
-## Offline scope
-
-The prototype remains online-only. Production offline functionality would require secure local persistence, synchronization, conflict resolution, and server-side identity controls, so it is documented as a future enhancement rather than simulated inaccurately.
+Turning off a specialized module hides its workflow but does not delete its existing demo records. This prevents a usability preference from becoming a destructive data action. Re-enabling the feature restores access to the saved demo information.

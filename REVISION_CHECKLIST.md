@@ -1,107 +1,51 @@
-# TindaTrack Revision 6 Checklist
+# TindaTrack Revision 7 Checklist
 
-## Role-based access
-- Owner demo login: implemented
-- Reseller demo login: implemented
-- Owner-only administrative areas protected from reseller: implemented
-- Owner can preview reseller experience: implemented
-- Role-specific navigation and tutorials: implemented
+## Round 2 usability revisions
+- Functional Simple View: implemented
+- Inventory common actions shown first in Simple View: implemented
+- Advanced inventory tools grouped under More: implemented
+- Full inventory actions restored when Simple View is OFF: implemented
+- FIFO first-use explanation: implemented
+- Adjust Stock explanation: implemented
+- Physical Stock Count explanation: implemented
+- Revised owner first-time tour: implemented
+- Custom Expense field revealed only when Custom is selected: implemented
+- Custom Expense discoverability helper text: implemented
 
-## Reseller storefront operations
-- Reseller Dashboard: implemented
-- New Sale from assigned stock: implemented
-- Automatic Reseller Stock deduction after sale: implemented
-- Sale automatically linked to reseller and visible to Owner: implemented
-- Per-reseller Cash / GCash / Credit configuration: implemented
-- Reseller-specific Sales History: implemented
-- Receipt identifies main store and reseller: implemented
-- Minimum selling price validation: implemented
-- Reseller may sell above minimum price: implemented
+## Optional module behavior
+- Reseller navigation hidden when Reseller Management is OFF: implemented
+- Reseller dashboard summary hidden when OFF: implemented
+- Reseller report summary card hidden when OFF: implemented
+- Reseller detailed report tab hidden when OFF: implemented
+- Reseller inventory report column hidden when OFF: implemented
+- Reseller oversight settings hidden when OFF: implemented
+- Reseller alerts hidden from Owner when OFF: implemented
+- Expiration product fields hidden when Expiration Tracking is OFF: implemented
+- Stock-in expiration field hidden when OFF: implemented
+- Expiration settings and notification toggle hidden when OFF: implemented
+- Expiration inventory column/status option hidden when OFF: implemented
+- Batch/FIFO product mode field hidden when Batch/FIFO is OFF: implemented
+- FIFO behavior disabled while Batch/FIFO is OFF: implemented
+- Existing hidden-module data preserved for re-enabling: implemented
 
-## Reseller customers and credit
-- Reseller-owned customer list: implemented
-- Customer records visible to Owner: implemented
-- Other resellers isolated from those customers: implemented by role/data scope
-- Reseller customer credit: implemented
-- Due dates: implemented
-- Customer payment recording: implemented
-- Completed Credit History: implemented
-- Owner visibility of reseller customer balances/history: implemented
-- Customer credit and reseller balance to Owner kept separate: implemented
+## Retained Revision 6 functionality
+- Owner and Reseller demo login: retained
+- Operational reseller storefront: retained
+- Wholesale and Consignment arrangements: retained
+- Reseller customers and credit: retained
+- Reseller stock, returns, and issue approval: retained
+- Owner reseller oversight and preview: retained
+- Flexible stock-in purchase sources: retained
+- Supplier history: retained
+- Inventory adjustments and reconciliation: retained
+- Automatic archive and restore: retained
+- Customer Credit History: retained
+- Simplified reports and exports: retained
+- Dark mode and mobile preview: retained
+- Inventory tooltips: retained
 
-## Reseller inventory
-- My Stock only shows Owner-assigned products: implemented
-- Received / Sold / Returned / Lost-Damaged / Pending / Available counts: implemented
-- Reseller cannot Add/Edit master products: implemented
-- Reseller cannot Stock-in from suppliers: implemented
-- Reseller cannot archive central products: implemented
-- Return request requires Owner confirmation: implemented
-- Stock issue report requires Owner approval: implemented
-- Owner approval updates official quantities and history: implemented
-
-## Reseller arrangements and balances
-- Wholesale mode: implemented
-- Consignment mode: implemented
-- Wholesale balance increases on stock release: implemented
-- Consignment balance increases when sale is recorded: implemented
-- Consignment credit sale also creates reseller obligation to Owner at sale time: implemented
-- Reseller Cost tracked separately from Minimum Selling Price: implemented
-- Reseller payment / balance history: implemented
-
-## Reseller expenses, reports, and profit
-- Reseller own expenses: implemented
-- Owner can view reseller expenses: implemented
-- Reseller simplified Reports page: implemented
-- Sales report: implemented
-- My Stock report: implemented
-- Customer Credit report: implemented
-- Expense report: implemented
-- Estimated reseller Profit report: implemented
-- Excel-compatible export: implemented
-- Print / Save as PDF: implemented
-- Optional Owner visibility of reseller estimated profit: implemented
-
-## Notifications
-- Owner grouped reseller-sale summary: implemented
-- Owner immediate reseller-sale mode: implemented
-- Owner can turn routine reseller-sale notifications off: implemented
-- Reseller customer credit event visible to Owner: implemented
-- Reseller customer credit payment event visible to Owner: implemented
-- Pending return / stock issue alerts to Owner: implemented
-- Reseller low assigned-stock alert: implemented
-- Reseller expiration alert: implemented
-- Reseller overdue customer-credit alert: implemented
-- New stock received notice: implemented
-- Return / stock issue approval result notice: implemented
-- Owner-balance reminder: implemented
-
-## Owner accounting clarity
-- Direct Store Sales separated from Reseller Retail Sales in summary: implemented
-- Direct-store profit does not treat reseller retail revenue as Owner retail revenue: implemented
-- Reseller activity remains available in dedicated reporting: implemented
-
-## Prior usability revisions retained
-- Spoilage / damage / loss stock adjustments: implemented
-- Physical stock reconciliation: implemented
-- Simple default inventory: implemented
-- Optional Batch/FIFO: implemented
-- Optional expiration tracking: implemented
-- Dashboard Needs Attention: implemented
-- Optional specialized dashboard summaries: implemented
-- Flexible Expenses: implemented
-- Simplified Reports: implemented
-- Supplier purchase history: implemented
-- First-time guided tours: implemented
-- Online-demo limitation disclosure: implemented
-
-## Deliberately deferred
-- Real server authentication and permissions
-- Multi-device cloud synchronization
-- Full offline transaction synchronization
-- Quick Sale / favorites
-- Advanced accounting ledger and tax logic
-- Advanced reseller commission schemes
-- Full production approval audit identities / signatures
-
-## Prototype limitation
-Data remains browser-local. Use demo information only.
+## Prototype limitations
+- Real server authentication: not implemented
+- Cloud synchronization: not implemented
+- Full offline synchronization: not implemented
+- Production audit identities/signatures: not implemented
