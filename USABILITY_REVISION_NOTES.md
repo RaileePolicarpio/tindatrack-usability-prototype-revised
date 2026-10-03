@@ -1,37 +1,56 @@
-# TindaTrack Usability Revision 7 - Round 2 Implementation Notes
+# TindaTrack Final Prototype - Implementation Notes
 
-## Revision goal
+## Starting point
+The Final Prototype is based on Usability Revision 7, which served as the academic **2nd Revision Prototype** evaluated by the IT-professional participants.
 
-Round 2 testing largely validated Revision 6. Testers described the revised system as clear, complete, easy to navigate, adaptable, time-saving, and capable of replacing paper records. The remaining concern was not missing functionality; it was the possibility that advanced or store-specific options could become confusing or visually crowded for businesses that do not need them.
+Revision 7 already addressed the Round 2 target-user concerns by making specialized features optional, adding a functional Inventory Simple View, improving first-use explanations, simplifying Reports, and preserving different workflows for different store types.
 
-Revision 7 therefore follows this principle:
+## Final-revision principle
+The Final Prototype does not add unnecessary new modules. It focuses on the remaining UI/UX concerns identified during professional evaluation while preserving features that had already tested well.
 
-**Keep the complete capability, but show specialized functions only when the store needs them.**
+**Refine validated functionality instead of redesigning it without evidence.**
 
-## Round 2 feedback translated into changes
+## Feedback translated into final changes
 
-### Advanced option complexity / initial onboarding
-Revision 7 adds short first-use explanations for FIFO, stock adjustments, physical stock counts, and the More-actions menu. The owner tour was expanded to explain these concepts in plain language.
+### Mobile side-scrolling
+The Final Prototype adds a compact phone top bar and converts Inventory into labeled mobile cards at narrow widths. This removes tested whole-page horizontal overflow while preserving the desktop table.
 
-### Feature clutter potential
-The previous Simple Mode setting is now a functional **Simple View**. In Inventory, common actions remain visible while less common tools are grouped under More.
+### Dashboard information density
+Simple View now affects the Owner Dashboard as well as Inventory. Essential daily information remains visible, while monthly and specialized summaries are moved to Full Dashboard or Reports.
 
-### Store-to-store differences
-Reseller Management, Expiration Tracking, and Batch/FIFO remain available because different testers valued different features. Disabling a module now removes its related UI from everyday screens instead of leaving unused controls visible.
+### First-time/demo clarity
+A Demo workspace notice clearly identifies the preloaded products, customers, sales, credit, and history as sample records.
 
-### Expense customization
-Custom expense categories already existed, but one tester still needed clarification. The Add Expense form now explicitly tells users to choose Custom and reveals the custom-category input only after that choice.
+### Light/Dark discoverability
+The desktop top-bar theme shortcut now includes a visible Dark/Light label rather than relying on an icon alone.
 
-### Reports
-The simplified Reports design is retained. Detailed reports remain hidden by default, and reseller-specific report content disappears when Reseller Management is disabled.
+### Landing-page identity
+The landing page more clearly identifies TindaTrack as a small-store school prototype and highlights the business contexts reflected in the usability work. Commercial free-trial/pricing language was removed.
 
-## What was deliberately not removed
+### Research integrity on the landing page
+The previous named testimonial quotations were removed because they were not documented study participants. The section now describes usability-informed design directions without attributing invented quotations to people.
 
-- Reseller Management: highly relevant to wholesale/reseller-based stores.
-- FIFO and expiration tracking: particularly useful for stores handling vegetables, food, or other expiring goods.
-- Stock adjustments and physical counts: important for spoilage, damage, loss, and reconciliation.
-- Detailed reports: still available, but kept behind progressive disclosure.
+### Product visual consistency
+The Add/Edit Product form now uses category-controlled illustrations from TindaTrack's visual library. Arbitrary product icon/image selection was removed from the Final Prototype interface.
 
-## Data preservation when modules are hidden
+## What was deliberately retained
+- Main navigation structure
+- Owner / Reseller role model
+- Inventory, Sales, Customer Credit, Expenses, Suppliers, and Reports
+- Reseller operations and oversight
+- Optional Reseller Management, Expiration Tracking, and Batch/FIFO
+- Stock adjustments and physical reconciliation
+- Customer Credit History
+- Archive and restore behavior
+- Guided tours
+- Softer dark theme
 
-Turning off a specialized module hides its workflow but does not delete its existing demo records. This prevents a usability preference from becoming a destructive data action. Re-enabling the feature restores access to the saved demo information.
+## Scope boundary
+Offline synchronization, real server authentication, cloud persistence, production security controls, and production-scale validation remain outside the UI/UX prototype scope.
+
+## Final onboarding refinement
+
+The two IT-professional evaluations were re-reviewed before finalization. One evaluator explicitly recommended a guided tutorial that points to the Dashboard and highlights what controls do, while the other evaluator positively received the short tutorial format but raised concerns about information density and first-time comprehension. The Final Prototype therefore expands onboarding through context rather than through longer blocks of text.
+
+The guided tour now moves through the real interface, highlights one relevant area at a time, and explains common workflows before optional or advanced functionality. This preserves the existing navigation and feature structure that tested well while reducing the amount of information a first-time user must interpret at once.
+

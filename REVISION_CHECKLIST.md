@@ -1,51 +1,63 @@
-# TindaTrack Revision 7 Checklist
+# TindaTrack Final Prototype Checklist
 
-## Round 2 usability revisions
-- Functional Simple View: implemented
-- Inventory common actions shown first in Simple View: implemented
-- Advanced inventory tools grouped under More: implemented
-- Full inventory actions restored when Simple View is OFF: implemented
-- FIFO first-use explanation: implemented
-- Adjust Stock explanation: implemented
-- Physical Stock Count explanation: implemented
-- Revised owner first-time tour: implemented
-- Custom Expense field revealed only when Custom is selected: implemented
-- Custom Expense discoverability helper text: implemented
+## Final IT-professional feedback refinements
+- Mobile whole-page horizontal overflow corrected at tested phone widths: implemented
+- Inventory mobile side-scrolling reduced through responsive card layout: implemented
+- Simple View extended to Owner Dashboard: implemented
+- Full/Simple Dashboard switch: implemented
+- Demo/sample data clearly identified: implemented
+- Top-bar Light/Dark shortcut made more discoverable: implemented
+- Landing-page small-store identity strengthened: implemented
+- Fictional-looking testimonial content removed: implemented
+- School-prototype/demo wording replaces free-trial/pricing language: implemented
+- Product illustration behavior standardized through category-controlled library: implemented
 
-## Optional module behavior
-- Reseller navigation hidden when Reseller Management is OFF: implemented
-- Reseller dashboard summary hidden when OFF: implemented
-- Reseller report summary card hidden when OFF: implemented
-- Reseller detailed report tab hidden when OFF: implemented
-- Reseller inventory report column hidden when OFF: implemented
-- Reseller oversight settings hidden when OFF: implemented
-- Reseller alerts hidden from Owner when OFF: implemented
-- Expiration product fields hidden when Expiration Tracking is OFF: implemented
-- Stock-in expiration field hidden when OFF: implemented
-- Expiration settings and notification toggle hidden when OFF: implemented
-- Expiration inventory column/status option hidden when OFF: implemented
-- Batch/FIFO product mode field hidden when Batch/FIFO is OFF: implemented
-- FIFO behavior disabled while Batch/FIFO is OFF: implemented
-- Existing hidden-module data preserved for re-enabling: implemented
+## Revision 7 behavior retained
+- Functional Inventory Simple View: retained
+- Advanced Inventory actions grouped under More: retained
+- Optional Reseller Management: retained
+- Optional Expiration Tracking: retained
+- Optional Batch/FIFO: retained
+- Plain-language advanced Inventory guidance: retained
+- Custom Expense category behavior: retained
+- Simplified Reports and progressive disclosure: retained
+- Owner and Reseller guided tours: retained
 
-## Retained Revision 6 functionality
-- Owner and Reseller demo login: retained
-- Operational reseller storefront: retained
-- Wholesale and Consignment arrangements: retained
-- Reseller customers and credit: retained
-- Reseller stock, returns, and issue approval: retained
-- Owner reseller oversight and preview: retained
-- Flexible stock-in purchase sources: retained
-- Supplier history: retained
-- Inventory adjustments and reconciliation: retained
-- Automatic archive and restore: retained
-- Customer Credit History: retained
-- Simplified reports and exports: retained
-- Dark mode and mobile preview: retained
-- Inventory tooltips: retained
+## Core workflow regression
+- Owner login: passed
+- Reseller login: passed
+- Add Product: passed
+- Owner Sale and stock deduction: passed
+- Stock-in and quantity increase: passed
+- Customer Credit: passed
+- Fully paid Credit History: passed
+- Optional feature hide/show: passed
+- Reseller Sale: passed
+- Tutorial replay: passed
+- Demo reset: passed
+
+## Responsive / appearance regression
+- Desktop layout: passed
+- 390 px Owner/Inventory horizontal overflow check: passed
+- 360 px Reseller horizontal overflow check: passed
+- Mobile Inventory card layout: passed
+- Light/Dark switch: passed
 
 ## Prototype limitations
 - Real server authentication: not implemented
 - Cloud synchronization: not implemented
 - Full offline synchronization: not implemented
 - Production audit identities/signatures: not implemented
+
+## Final onboarding refinement
+- Contextual Owner guided tour (12 steps): implemented
+- Contextual Reseller guided tour (10 steps): implemented
+- Automatic screen navigation during tour: implemented
+- Spotlight on current tutorial target: implemented
+- Tutorial Back / Next / Exit / Finish flow: implemented
+- Demo-data explanation within tutorial: implemented
+- Simple Dashboard Needs Attention capped to top three: implemented
+- Subtle landing-page store context motif: implemented
+- Restrained interaction transitions: implemented
+- Reduced-motion preference support: implemented
+
